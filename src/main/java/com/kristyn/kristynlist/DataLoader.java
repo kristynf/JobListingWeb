@@ -12,13 +12,13 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception{
         Job job;
-        job = new Job("Network Analyst", "Come run our Cisco network", "2020-02-21", "Mike Wizowski", "202-222-2100");
+        job = new Job("Network Analyst", "Come run our Cisco network", "2020-02-21", "Mike Wizowski", "202-222-2100", null);
         repository.save(job);
 
-        job = new Job("Web Developer", "Come make our website awesome", "2020-02-21", "Jane E. Doe", "202-222-2101");
+        job = new Job("Web Developer", "Come make our website awesome", "2020-02-21", "Jane E. Doe", "202-222-2101", null);
         repository.save(job);
 
-        job = new Job("Application Developer", "You: make great apps, We = need you!", "2020-02-21", "Jane Smithley", "202-222-2102");
+        job = new Job("Application Developer", "You: make great apps, We = need you!", "2020-02-21", "Jane Smithley", "202-222-2102", null);
         repository.save(job);
     }
 }

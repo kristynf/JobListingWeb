@@ -10,3 +10,8 @@ header {
 section {
   padding: 150px 0;
 }
+
+.crop {
+  height: auto;
+  width: 100px;
+}

@@ -54,6 +54,7 @@
                         <th>Post Date</th>
                         <th>Author</th>
                         <th>Phone</th>
+                        <th>Picture</th>
                     </tr>
                     <tr th:each="job : ${jobs}">
                         <td th:text="${job.title}"></td>
@@ -61,6 +62,7 @@
                         <td th:text="${job.postedDate}"></td>
                         <td th:text="${job.author}"></td>
                         <td th:text="${job.phone}"></td>
+                        <td><img class="crop" th:src="${job.picture}"></td>
                         <td>
                             <a th:href="@{/update/{id}(id=${job.id})}">Update</a> -
                             <a th:href="@{/detail/{id}(id=${job.id})}">Details</a> -

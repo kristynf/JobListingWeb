@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
@@ -64,8 +64,9 @@
             <div class="col-lg-8 mx-auto">
                 <h2>Job Form</h2>
                 <p class="lead">Enter A New Job Here</p>
-                <form action="#" th:action="@{/process}" th:object="${job}" method="post">
+                <form action="#" th:action="@{/add}" th:object="${job}" method="post" enctype="multipart/form-data">
                     <input type="hidden" th:field="*{id}"/>
+                    <input type="hidden" th:field="*{picture}" />
                     Title :<input type="text" th:field="*{title}"/>
                     <span th:if="${#fields.hasErrors('title')}"
                           th:errors="*{title}"></span><br/>
@@ -81,6 +82,7 @@
                     Phone :<input type="text" th:field="*{phone}"/>
                     <span th:if="${#fields.hasErrors('phone')}"
                           th:errors="*{phone}"></span><br/>
+                    Picture (optional) :<input type="file" name="file"/>
                     <br/>
                     <input type="submit" value="Submit Posting"/>
                 </form>

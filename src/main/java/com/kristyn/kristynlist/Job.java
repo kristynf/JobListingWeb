@@ -37,12 +37,16 @@ public class Job {
     @Size(min=10)
     private String phone;
 
-    public Job(@NotNull @Size(min = 4) String title, @NotNull @Size(min = 10) String description, @NotNull @Size(min = 6) String postedDate, @NotNull @Size(min = 4) String author, @NotNull @Size(min = 10) String phone) {
+
+    private String picture;
+
+    public Job(@NotNull @Size(min = 4) String title, @NotNull @Size(min = 10) String description, @NotNull @Size(min = 6) String postedDate, @NotNull @Size(min = 4) String author, @NotNull @Size(min = 10) String phone, String picture) {
         this.title = title;
         this.description = description;
         this.postedDate = postedDate;
         this.author = author;
         this.phone = phone;
+        this.picture = picture;
     }
 
     public Job() {
@@ -96,4 +100,12 @@ public class Job {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
 }
