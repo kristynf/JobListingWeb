@@ -37,6 +37,17 @@ public class Job {
     @Size(min=10)
     private String phone;
 
+    public Job(@NotNull @Size(min = 4) String title, @NotNull @Size(min = 10) String description, @NotNull @Size(min = 6) String postedDate, @NotNull @Size(min = 4) String author, @NotNull @Size(min = 10) String phone) {
+        this.title = title;
+        this.description = description;
+        this.postedDate = postedDate;
+        this.author = author;
+        this.phone = phone;
+    }
+
+    public Job() {
+    }
+
 
     public long getId() {
         return id;
