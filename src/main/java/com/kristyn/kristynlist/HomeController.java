@@ -1,6 +1,5 @@
 package com.kristyn.kristynlist;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -51,5 +50,9 @@ public class HomeController {
     public String deleteJob(@PathVariable("id") long id){
         jobRepository.deleteById(id);
         return "redirect:/";
+    }
+    @RequestMapping("/about")
+    public String about(){
+        return "about";
     }
 }

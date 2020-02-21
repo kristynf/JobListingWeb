@@ -3,33 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
-    <title>Job Form</title>
+    <title>Show Jobs</title>
     <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
     <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-        <link th:href="@{css/scrolling-nav.css}" rel="stylesheet">
+    <link th:href="@{css/scrolling-nav.css}" rel="stylesheet">
 
 </head>
 <body>
-<!--<nav class="navbar navbar-light bg-primary">
-    <a class="navbar-brand" href="/">
-        <img src="/Images/handshake.png" width="35" height="35" class="d-inline-block align-top" alt="">
-        KristynsList
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
-        </div>
-    </div>
-</nav>-->
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
@@ -58,36 +41,25 @@
         <p class="lead">Enter and Manage Job Listings</p>
     </div>
 </header>
-<section id="contact">
-    <div align="center" class="container">
+<div class="about-section paddingTB60 gray-bg">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Job Form</h2>
-                <p class="lead">Enter A New Job Here</p>
-                <form action="#" th:action="@{/process}" th:object="${job}" method="post">
-                    <input type="hidden" th:field="*{id}"/>
-                    Title :<input type="text" th:field="*{title}"/>
-                    <span th:if="${#fields.hasErrors('title')}"
-                          th:errors="*{title}"></span><br/>
-                    Description :<input type="text" th:field="*{description}"/>
-                    <span th:if="${#fields.hasErrors('description')}"
-                          th:errors="*{description}"></span><br/>
-                    Posted Date :<input type="date" th:field="*{postedDate}"/>
-                    <span th:if="${#fields.hasErrors('postedDate')}"
-                          th:errors="*{postedDate}"></span><br/>
-                    Author :<input type="text" th:field="*{author}"/>
-                    <span th:if="${#fields.hasErrors('author')}"
-                          th:errors="*{author}"></span><br/>
-                    Phone :<input type="text" th:field="*{phone}"/>
-                    <span th:if="${#fields.hasErrors('phone')}"
-                          th:errors="*{phone}"></span><br/>
-                    <br/>
-                    <input type="submit" value="Submit Posting"/>
-                </form>
+            <div class="col-md-7 col-sm-6">
+                <div class="about-title clearfix">
+                    <h1>About <span>kferbs</span></h1>
+                    <h3>Web Developer Extraordinaire</h3>
+                    <p class="about-paddingB">K Ferbs is a student at the prestigious Montgomery College Web Development Bootcamp. She is loving the Java life. </p>
+
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-6">
+                <div class="about-img">
+                    <img src="https://devitems.com/preview/appmom/img/mobile/2.png" alt="">
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
@@ -95,12 +67,6 @@
     </div>
     <!-- /.container -->
 </footer>
-
-
-
-
-
-
 
 <script th:src="@{https://code.jquery.com/jquery-3.2.1.slim.min.js}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -114,6 +80,5 @@
 
 <!-- Custom JavaScript for this theme -->
 <script th:src="@{js/scrolling-nav.js}"></script>
-
 </body>
 </html>

@@ -26,6 +26,7 @@ public class Job {
 
     @NotNull
     @DateTimeFormat
+    @Size(min=6)
     private String postedDate;
 
     @NotNull
